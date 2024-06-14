@@ -6,6 +6,7 @@ test("Test with Page Fixtures", async ({ page }) => {
   console.log("Text Content: ", await page.title());
 });
 
+// playwright provides fixtures for browser, page, and context.
 test("Other fixtures", async ({ browserName, browser, context, page }) => {
   await context.newPage();
   console.log("Browser Name: ", browserName);

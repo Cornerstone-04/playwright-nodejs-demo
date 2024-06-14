@@ -1,27 +1,28 @@
-
 (() => {
-  'use strict'
+  "use strict";
   const periodYields = new Map([
     [0.5, 0.04],
     [1, 0.05],
     [2, 0.06],
   ]);
 
-  let input = document.getElementById('deposit');
-  let period = document.getElementById('period');
-  let result = document.getElementById('result');
+  let input = document.getElementById("deposit");
+  let period = document.getElementById("period");
+  let result = document.getElementById("result");
 
-  input.addEventListener('input', event => {
+  input.addEventListener("input", (event) => {
     displayReturn();
   });
 
-  period.addEventListener('change', event => {
+  period.addEventListener("change", (event) => {
     displayReturn();
   });
 
   function displayReturn() {
     let sum = input.value;
-    if (sum < 1) { return; }
+    if (sum < 1) {
+      return;
+    }
     let selected = period.options[period.selectedIndex].value;
     let periodInYears = convertPeriod(selected);
     let expectedReturn = calculateReturn(sum, periodInYears);
@@ -33,11 +34,11 @@
   function convertPeriod(option) {
     let periodKeys = Array.from(periodYields.keys());
     switch (option) {
-      case '6 Months':
+      case "6 Months":
         return periodKeys[0];
-      case '1 Year':
+      case "1 Year":
         return periodKeys[1];
-      case '2 Years':
+      case "2 Years":
         return periodKeys[2];
     }
   }
@@ -46,6 +47,4 @@
     let yearlyYield = periodYields.get(periodInYears);
     return sum * periodInYears * yearlyYield;
   }
-
-
-})()
+})();
