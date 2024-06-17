@@ -7,7 +7,7 @@ export default defineConfig({
   use: {
     baseURL: "http://localhost:3000",
     headless: false,
-    launchOptions: { slowMo: 1500 },
+    launchOptions: { slowMo: 1000 },
   },
   // command to run server while testing
   webServer: {
