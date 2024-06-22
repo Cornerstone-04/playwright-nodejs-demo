@@ -6,7 +6,7 @@ export default defineConfig({
   // override defaults
   use: {
     baseURL: "http://localhost:3000",
-    headless: false,
+    // headless: false,
     launchOptions: { slowMo: 1000 },
   },
   // command to run server while testing
