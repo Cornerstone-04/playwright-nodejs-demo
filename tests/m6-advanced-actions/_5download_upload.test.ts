@@ -29,3 +29,15 @@ test("Download a single file and assert", async ({ page }) => {
  * e.g: download will emit for zip files but not for pdfs
  * NB: previewable files will emit download event only in headless mode
  */
+
+test("upload", async ({ page }) => {
+  await page.goto("/loans.html");
+  const uploadInput = page.locator('input[type="file"]');
+  await uploadInput.setInputFiles("download/dummy.pdf");
+
+  // clear uploads 
+  await uploadInput.setInputFiles([])
+
+  // submit
+  
+});

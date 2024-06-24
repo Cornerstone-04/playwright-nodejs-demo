@@ -8,6 +8,7 @@ export default defineConfig({
     baseURL: "http://localhost:3000",
     // headless: false,
     launchOptions: { slowMo: 1000 },
+    screenshot: "only-on-failure",
   },
   // command to run server while testing
   webServer: {
