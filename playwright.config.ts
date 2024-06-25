@@ -3,6 +3,7 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests",
   reporter: "html",
+  fullyParallel: true, // for full parallelisation
   // override defaults
   use: {
     baseURL: "http://localhost:3000",
