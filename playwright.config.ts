@@ -5,6 +5,20 @@ export default defineConfig({
   reporter: "html",
   fullyParallel: true, // for full parallelisation
   // override defaults
+
+  /**
+   * conifguration format
+  workers: 2,
+  retries: 2,
+  maxFailures: 5,
+  //  nested properties
+  expect:{
+    timeout: 2000,
+    toHaveScreenshot
+    
+  },
+  */
+
   use: {
     baseURL: "http://localhost:3000",
     // headless: false,
