@@ -26,7 +26,7 @@ test.beforeEach("Create Repo", async ({ request }) => {
   expect(response.ok()).toBeTruthy();
 });
 
-test("Wrok with new created repo", async ({ page }) => {
+test("Work with new created repo", async ({ page }) => {
   await page.goto("https://github.com/Cornerstone-04/?tab=repositories");
   await expect(page.getByRole("link", { name: REPO })).toHaveCount(1);
 
