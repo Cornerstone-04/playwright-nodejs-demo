@@ -41,5 +41,12 @@ export default defineConfig({
       name: "firefox",
       use: { ...devices["Desktop Firefox"] },
     },
+    {
+      name: "Mobile Safari",
+      use: { ...devices["iPhone 12 Pro"] },
+      testDir: "./tests/mobile", // run tests in this directory
+      testMatch: /.*smoke.test.ts/, //run only tests with smoke in their name
+      retries: 0,
+    },
   ], // allows you to group and run tests in multiple environments
 });
