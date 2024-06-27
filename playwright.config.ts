@@ -55,8 +55,13 @@ export default defineConfig({
       dependencies: ["setup"],
     },
     {
+      name: "cleanup",
+      testMatch: "**/global.teardown.ts",
+    },
+    {
       name: "setup", //must match dependency name
       testMatch: "**/global.setup.ts",
+      teardown: "cleanup", //global cleanup
     },
   ], // allows you to group and run tests in multiple environments
 });
