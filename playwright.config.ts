@@ -48,5 +48,15 @@ export default defineConfig({
       testMatch: /.*smoke.test.ts/, //run only tests with smoke in their name
       retries: 0,
     },
+    // global setup
+    {
+      name: "setup-cleanup-demo",
+      testMatch: "_4global-config.test.ts",
+      dependencies: ["setup"],
+    },
+    {
+      name: "setup", //must match dependency name
+      testMatch: "**/global.setup.ts",
+    },
   ], // allows you to group and run tests in multiple environments
 });
