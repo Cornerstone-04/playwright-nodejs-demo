@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { GITHUB_KEY, GITHUB_URL } from "./constants";
 
 /**
  * TODO:
@@ -8,10 +9,10 @@ import { expect, test } from "@playwright/test";
 
 const REPO = "Playwright-Test-Repo";
 test.use({
-  baseURL: "https://api.github.com/",
+  baseURL: GITHUB_URL,
   extraHTTPHeaders: {
     Accept: "application/vnd.github.v3+json",
-    Authorization: `token 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`,
+    Authorization: `token ${GITHUB_KEY}`,
   },
 });
 
