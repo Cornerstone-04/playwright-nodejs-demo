@@ -24,6 +24,7 @@ export default defineConfig({
     // headless: false,
     launchOptions: { slowMo: 1000 },
     screenshot: "only-on-failure",
+    trace: "on-first-retry"
   },
   // command to run server while testing
   webServer: {
