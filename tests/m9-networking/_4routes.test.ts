@@ -26,6 +26,7 @@ test("Fulfill", async ({ page }) => {
       status: 404,
       contentType: "text/plain",
       body: "Not Found",
+      
     });
   });
   await page.goto("/savings.html");
