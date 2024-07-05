@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "live-server src",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "report": "npx playwright show-report"
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "live-server": "^1.2.2"
   }
 }
