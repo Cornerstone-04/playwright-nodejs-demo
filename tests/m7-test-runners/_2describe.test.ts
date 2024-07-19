@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import test from "@playwright/test";
 
 test.describe("Feature A Group", () => {
   test("Test A.1", async ({ page }) => {
